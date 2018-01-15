@@ -4,10 +4,7 @@
 set -e
 
 readonly PROGNAME=$(basename "$0" .sh)
-readonly LOCKFILE_DIR=/tmp
 readonly INSTANCE="$1"
-readonly LOCKFILE="${LOCKFILE_DIR}/${PROGNAME}-${INSTANCE}"
-readonly PID="$$"
 
 if [ -z "${INSTANCE}" ]; then
         echo "Must provide an instance!"
